@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+/* #region main */
 * {
   padding: 0;
   margin: 0;
@@ -10,18 +10,17 @@
 
 html {
   font-size: 10px;
-  font-family: 'Viaoda Libre', cursive;
+  font-family: "Viaoda Libre", cursive !important;
   background-color: white;
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
-  color: #f15a28;
+  color: #0052af;
 }
 
-
-.container {
+.containers {
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -56,7 +55,8 @@ p {
 .section-title span {
   color: #f15a28;
 }
-/* Header section */
+/* #endregion */
+/* #region Header section */
 #header {
   position: fixed;
   z-index: 100;
@@ -68,7 +68,7 @@ p {
 
 #header .header {
   min-height: 8vh;
-  background-color: rgba(82, 0, 0, 0.24);
+  background: linear-gradient(to bottom, #3b8c99a1, #6b6b8365, #aa4b6b3d);
 }
 #header .nav-bar {
   display: flex;
@@ -83,7 +83,7 @@ p {
 #header .nav-list ul {
   list-style: none;
   position: absolute;
-  background-color: rgb(182, 42, 42);
+  background: linear-gradient(to bottom, #aa4b6bce, #6b6b83bb, #3b8c99ab);
   width: 100vw;
   height: 100vh;
   left: 100%;
@@ -129,11 +129,10 @@ p {
 #header .nav-list ul li:hover a {
   color: #f15a28;
 }
-#header .header .brand{
-  width: 150px
+#header .header .brand {
+  width: 150px;
 }
 #header .header .brand img {
-  
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -141,7 +140,7 @@ p {
 #header .hamburger {
   height: 37px;
   width: 37px;
-  border: 3px solid white;
+  border: 3px solid #c42c74;
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -157,14 +156,14 @@ p {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid #c42c74;
   animation: hamburger_pulse 1s ease infinite;
 }
 #header .hamburger .bar {
   height: 2px;
   width: 15px;
   position: relative;
-  background-color: white;
+  background-color: rgb(20, 179, 241);
   z-index: -1;
 }
 #header .hamburger .bar::after,
@@ -174,7 +173,7 @@ p {
   height: 100%;
   width: 100%;
   left: 0;
-  background-color: white;
+  background-color: rgb(20, 179, 241);
   transition: 0.3s ease;
   transition-property: top, bottom;
 }
@@ -192,10 +191,10 @@ p {
   top: 0;
 }
 
-/* End Header section*/
-/* Hero Section */
+/* #endregion Header section*/
+/* #region Hero Section */
 #hero {
-  background-image: url("Images/1334965-dia-de-los-muertos-fargstark-bakgrund-gratis-vector.jpg");
+  background-image: url("images/wp5922621-retro-wave-palm-tree-wallpapers.jpg");
   background-size: cover;
   background-position: top center;
   position: relative;
@@ -208,8 +207,8 @@ p {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: 0.7;
+  background-color: #db4b8e;
+  opacity: 0.4;
   z-index: -1;
 }
 
@@ -223,9 +222,9 @@ p {
 #hero .cta {
   display: inline-block;
   padding: 5px 25px;
-  color: #f15a28;
+  color: #0081bc;
   background-color: transparent;
-  border: 2px solid #f15a28;
+  border: 2px solid #0081bc;
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -237,14 +236,15 @@ p {
 
 #hero .cta:hover {
   color: white;
-  background-color: #1d0834;
-  border-color: #1d0834;
+  background-color: #ff479d;
+  border-color: #ff479d;
 }
-/* End Hero Section */
+/* #endregion End Hero Section */
 
-/* Start Menu Section */
-#menu{
+/* #region Start Menu Section */
+#menu {
   z-index: 1;
+  background: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99);
 }
 #menu .menu {
   flex-direction: column;
@@ -265,7 +265,7 @@ p {
   margin: 0 10px;
 }
 #menu .menu-top span {
-  color: #f15a28;
+  color: #0081bc;
 }
 
 #menu .menu-item {
@@ -308,18 +308,21 @@ p {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-#menu .menu-item h2 a:hover{
-color:#1d0834;
+#menu .menu-item h2 a:hover {
+  color: #1d0834;
 }
 #menu .menu-item p {
   color: white;
   text-align: left;
-  top: 0
+  top: 0;
 }
-/* End Menu Section */
+/* #endregion End Menu Section */
 
-/* Insta Section */
-#instagram .instagram{
+/* #region Insta Section */
+#instagram {
+  background: linear-gradient(to bottom, #aa4b6b, #6b6b83, #355c7d);
+}
+#instagram .instagram {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -327,33 +330,65 @@ color:#1d0834;
   height: 100%;
   width: 100%;
 }
-#instagram .instagram .insta-feed{
- width: 1000px;
-}
 
-#instagram .instagram #instafeed{
+#instagram .instagram #Feed-container {
   display: flex;
-  justify-content: space-around;
-  
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-#instagram .instagram #instafeed a{
-  margin: 20px;
-  width: 50%
+
+#instagram .instagram #Feed-container .Forground {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.5);
 }
-/* End Insta Section */
 
+#instagram .instagram #Feed-container .card {
+  background: transparent;
+  width: 250px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+  text-align: center;
+}
 
-/* Contact Section */
-.flowerimg{
+#instagram .instagram #Feed-container .card .FeedUrl-ContOne,
+.FeedUrl-ContTwo,
+.CaptionThree {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+#instagram .instagram #Feed-container .card .FeedUrl-ContOne #FeedUrlOne,
+#FeedUrlTwo,
+#FeedUrlThree {
+  width: 100%;
+  height: 100%;
+}
+
+/* #endregion End Insta Section */
+
+/* #region Contact Section */
+.flowerimg {
   position: absolute;
   z-index: 2;
   width: fit-content;
-text-align: center;
+  text-align: center;
   width: 100%;
   top: -20px;
   max-width: 1000px;
   height: auto;
-
 }
 .test {
   position: absolute;
@@ -366,7 +401,7 @@ text-align: center;
 }
 
 #contacts {
-  /* background-color: #292626; */
+  background: linear-gradient(to bottom, #355c7d, #6c5b7b, #c06c84);
   position: relative;
   /* z-index: 1; */
 }
@@ -395,10 +430,11 @@ text-align: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
+  width: 70%;
   margin: 20px auto;
   overflow: hidden;
-  border-radius: 10px;
+  max-height: 470px;
+  border-radius: 15px;
 }
 #contacts .contact-info {
   padding: 30px;
@@ -454,10 +490,11 @@ text-align: center;
   transform: scale(1.1);
 }
 
-/* End Contact Section */
-/* OpenHours Section */
-#OpenHours{
+/* #endregion End Contact Section */
+/* #region OpenHours Section */
+#OpenHours {
   z-index: 1;
+  background: linear-gradient(to top, #4568dc, #c06c84);
 }
 #OpenHours .OpenHours {
   flex-direction: column-reverse;
@@ -501,9 +538,9 @@ text-align: center;
 #OpenHours .col-right p {
   margin-bottom: 20px;
 }
-/* End OpenHours Section */
+/* #endregion End OpenHours Section */
 
-/* Footer section */
+/* #region Footer section */
 #footer {
   background-image: linear-gradient(60deg, #2f0747 0%, #16082c 100%);
 }
@@ -530,9 +567,9 @@ text-align: center;
 #footer .Social-icon img {
   padding: 0 10px;
 }
-/* End Footer section */
+/* #endregion End Footer section */
 
-/* Media Query Tablet */
+/* #region Media Query Tablet */
 @media screen and (min-width: 768px) {
   #hero .cta {
     font-size: 2.3em;
@@ -561,8 +598,8 @@ text-align: center;
     flex-direction: row;
   }
   #contacts .contacts .contact-item {
-    min-height: 470px;
-    margin: 0 10px;
+    margin: 40px 30px;
+    max-height: 500px;
   }
 
   #contacts .contacts .contact-item .contact-info {
@@ -572,10 +609,10 @@ text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
-  p{
+  p {
     font-size: 1.8rem;
   }
-  .section-title{
+  .section-title {
     font-size: 4.3rem;
   }
   #header .hamburger {
@@ -586,7 +623,8 @@ text-align: center;
     display: block;
     height: auto;
     width: fit-content;
-    background-color: transparent;
+    background: transparent;
+    margin: 0 !important;
   }
   #header .nav-list ul li {
     display: inline-block;
@@ -598,15 +636,23 @@ text-align: center;
     display: none;
   }
 
-  #OpenHours .col-left{
-  margin: 30px;
-  padding: 10px 30px;
+  #OpenHours .col-left {
+    margin: 30px;
+    padding: 10px 30px;
+  }
+  #instagram .instagram #Feed-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
+  #contacts .contacts .contact-item {
+    margin: 50px 60px;
   }
 }
-/* End Media Query Tablet */
+/* #endregion End Media Query Tablet */
 
-/* Media query desktop */
+/* #region Media query desktop */
 @media screen and (min-width: 1100px) {
   #menu .menu-bottom .menu-item {
     flex-basis: 22%;
@@ -616,11 +662,15 @@ text-align: center;
 
   #contacts .contacts .contact-item .contact-info {
     min-width: 564px;
+    max-width: 564px;
   }
 }
 
-/* End Media query desktop */
-/* Keyframe */
+@media screen and (min-width: 1440px) {
+}
+
+/* #endregion End Media query desktop */
+/* #region Keyframe */
 @keyframes hamburger_pulse {
   0% {
     opacity: 1;
@@ -631,4 +681,4 @@ text-align: center;
     transform: scale(1.4);
   }
 }
-/* EndKeyframe */
+/* #endregion EndKeyframe */

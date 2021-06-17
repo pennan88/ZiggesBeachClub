@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zigges Garage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <!-- Header -->
     <section id="header">
-        <div class="header container">
+        <div class="header containers">
             <div class="nav-bar">
                 <div class="brand">
                     <a href="#hero"><img src="Images/beach club retro.png" alt=""></a>
@@ -23,7 +25,8 @@
                     </div>
                     <ul>
                         <li><a href="#hero" data-after="Hem">Hem</a></li>
-                        <li><a href="#menu" data-after="Meny">Meny</a></li>
+                        <!-- <li><a href="#menu" data-after="Meny">Meny</a></li> -->
+                        <li><a href="#instagram" data-after="Meny">Instagram</a></li>
                         <li><a href="#contacts" data-after="Kontakta">Kontakta oss</a></li>
                         <li><a href="#OpenHours" data-after="Öppetider">Öppetider</a></li>
                     </ul>
@@ -34,18 +37,18 @@
     <!-- End Header -->
     <!-- Hero section -->
     <section id="hero">
-        <div class="hero container">
+        <div class="hero containers">
             <div>
                 <img src="Images//beach club 1.png" alt="">
-                <a href="#menu" type="button" class="cta">Meny</a>
+                <!-- <a href="#menu" type="button" class="cta">Meny</a> -->
             </div>
         </div>
     </section>
     <!-- End Hero section -->
 
     <!-- Menu Section -->
-    <section id="menu">
-        <div class="menu container">
+    <!-- <section id="menu">
+        <div class="menu containers">
             <div class="menu-top">
                 <h1 class="section-title">Me<span>ny</span></h1>
                 <p> Vi har många goda maträtter att välja av! Inte bara för att äta här utan ni kan även köpa hem våra
@@ -73,31 +76,54 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- End Menu Section -->
     <!-- Insta section -->
     <section id="instagram">
-        <div class="instagram container">
+        <div class="instagram containers">
             <div class="contacts-header">
                 <h1 class="section-title">Insta<span>gram</span></h1>
             </div>
-        <div class="insta-feed">
-            
-        <div id="instafeed"></div>
+            <div id="Feed-container">
+                <div class="card FeedOne">
+                    <div class="ForgroundDivOne Forground">
+                        <p id="CaptionOne">Test</p>
+                    </div>
+                    <div class="FeedUrl-ContOne">
+                        <a id="FeedUrlOne" href=""></a>
+                    </div>
+                </div>
+                <div class="card FeedTwo">
+                    <div class="ForgroundDivOne Forground">
+                        <p id="CaptionTwo">Test</p>
+                    </div>
+                    <div class="FeedUrl-ContTwo">
+                        <a id="FeedUrlTwo" href=""></a>
+                    </div>
+                </div>
+
+                <div class="card FeedThree">
+                    <div class="ForgroundDivOne Forground">
+                        <p id="CaptionThree">Test</p>
+                    </div>
+                    <div class="FeedUrl-ContThree">
+                        <a id="FeedUrlThree" href=""></a>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
-        </div>container
     </section>
     <!-- End Insta section -->
 
     <!-- Contact Section -->
     <section id="contacts">
-        <img class="flowerimg" src="/Images/Gogivo_5235.svg" alt="">
-              
-        <div class="contacts container">
-            
-            
-            <!-- <img class="test" src="Images/01070 Sugar Skull Day Of The Dead.svg" alt=""> -->
-           <div class="contacts-header">
+        <!-- <img class="flowerimg" src="/Images/Gogivo_5235.svg" alt=""> -->
+
+        <div class="contacts containers">
+            <div class="contacts-header">
                 <h1 class="section-title">Kontakta <span>oss</span></h1>
             </div>
             <div class="all-contacts">
@@ -122,6 +148,10 @@
                         <p>Kom hit och hällsa på oss! vi finns på Hamngatan 45, 302 43 <span><a target="_blank"
                                     href="https://www.google.se/maps/place/Zigges+Garage/@56.6764476,12.8598645,20z/data=!4m5!3m4!1s0x4651a33b7f83641d:0x9501b50c85159bf4!8m2!3d56.6764486!4d12.8600124">Halmstad</a></span>
                         </p>
+                        <br>
+                        <br>
+                        <br>
+
                     </div>
                     <div class="contact-img">
                         <img src="Images/633f69b22a440e31d8e4eac63a36b78d.jpg" alt="">
@@ -135,7 +165,7 @@
 
     <!-- Store Open Section -->
     <section id="OpenHours">
-        <div class="OpenHours container">
+        <div class="OpenHours containers">
             <div class="col-left">
                 <div class="InnerLeft">
                     <p>Monday</p>
@@ -157,7 +187,7 @@
                 </div>
             </div>
             <div class="col-right">
-                <h1 class="section-title">Öppe<span>Tider</span></h1>
+                <h1 class="section-title">Öppet<span>Tider</span></h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat ducimus repellat asperiores quasi
                     in, nihil exercitationem eius. Laboriosam, sunt odio, eligendi facilis vel minima ad ab praesentium
                     omnis hic voluptates!</p>
@@ -167,7 +197,7 @@
     <!-- End Store Open Section -->
     <!-- Footer -->
     <section id="footer">
-        <div class="footer container">
+        <div class="footer containers">
             <div class="welcome">
                 <h1>Välkommen <span>in!</span></h1>
             </div>
@@ -190,8 +220,10 @@
         </div>
     </section>
     <!-- End Footer -->
+
     <script src="JS/app.js"></script>
-    <script src="JS/instafeed.main.js"></script>
+    <!-- <script src="JS/api.js"></script>
+    <script src="JS/FeedArray.js"></script> -->
 
 </body>
 
