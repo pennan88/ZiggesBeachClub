@@ -508,7 +508,7 @@ p {
   display: flex;
   justify-content: space-around;
   width: 300px;
-  height: 270px;
+  height: 250px;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
@@ -663,6 +663,10 @@ p {
   #contacts .contacts .contact-item .contact-info {
     min-width: 564px;
     max-width: 564px;
+  }
+
+  #OpenHours .col-left {
+    height: 270px;
   }
 }
 
