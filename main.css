@@ -1,0 +1,634 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Viaoda Libre', cursive;
+  background-color: white;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #f15a28;
+}
+
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+p {
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  color: white;
+}
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.section-title span {
+  color: #f15a28;
+}
+/* Header section */
+#header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
+}
+
+#header .header {
+  min-height: 8vh;
+  background-color: rgba(82, 0, 0, 0.24);
+}
+#header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  padding: 0 10px;
+  position: relative;
+}
+#header .nav-list ul {
+  list-style: none;
+  position: absolute;
+  background-color: rgb(182, 42, 42);
+  width: 100vw;
+  height: 100vh;
+  left: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.4s ease left;
+}
+
+#header .nav-list ul.active {
+  left: 0;
+}
+#header .nav-list ul a {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+}
+#header .nav-list ul a::after {
+  content: attr(data-after);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: rgba(240, 248, 255, 0.021);
+  font-size: 10rem;
+  letter-spacing: 50px;
+  z-index: -1;
+  transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: initial;
+}
+
+#header .nav-list ul li:hover a {
+  color: #f15a28;
+}
+#header .header .brand{
+  width: 150px
+}
+#header .header .brand img {
+  
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#header .hamburger {
+  height: 37px;
+  width: 37px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer;
+  margin: 20px;
+}
+#header .hamburger::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  animation: hamburger_pulse 1s ease infinite;
+}
+#header .hamburger .bar {
+  height: 2px;
+  width: 15px;
+  position: relative;
+  background-color: white;
+  z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transition: 0.3s ease;
+  transition-property: top, bottom;
+}
+
+#header .hamburger .bar::after {
+  top: 8px;
+}
+#header .hamburger .bar::before {
+  bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+  bottom: 0;
+}
+#header .hamburger.active .bar::after {
+  top: 0;
+}
+
+/* End Header section*/
+/* Hero Section */
+#hero {
+  background-image: url("Images/1334965-dia-de-los-muertos-fargstark-bakgrund-gratis-vector.jpg");
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+#hero img {
+  display: block;
+  width: fit-content;
+  width: 300px;
+  position: relative;
+  color: white;
+}
+#hero .cta {
+  display: inline-block;
+  padding: 5px 25px;
+  color: #f15a28;
+  background-color: transparent;
+  border: 2px solid #f15a28;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 36px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+
+#hero .cta:hover {
+  color: white;
+  background-color: #1d0834;
+  border-color: #1d0834;
+}
+/* End Hero Section */
+
+/* Start Menu Section */
+#menu{
+  z-index: 1;
+}
+#menu .menu {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+#menu .menu-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+#menu .menu-top {
+  margin: 0 10px;
+}
+#menu .menu-top span {
+  color: #f15a28;
+}
+
+#menu .menu-item {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url("Images/633f69b22a440e31d8e4eac63a36b78d.jpg");
+  background-size: cover;
+  margin: 10px 5px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#menu .menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #2f0747 0%, #16082c 100%);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+#menu .menu-bottom .icon {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+#menu .menu-item h2 a {
+  font-size: 2rem;
+  color: #f15a28;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#menu .menu-item h2 a:hover{
+color:#1d0834;
+}
+#menu .menu-item p {
+  color: white;
+  text-align: left;
+  top: 0
+}
+/* End Menu Section */
+
+/* Insta Section */
+#instagram .instagram{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+#instagram .instagram .insta-feed{
+ width: 1000px;
+}
+
+#instagram .instagram #instafeed{
+  display: flex;
+  justify-content: space-around;
+  
+}
+#instagram .instagram #instafeed a{
+  margin: 20px;
+  width: 50%
+}
+/* End Insta Section */
+
+
+/* Contact Section */
+.flowerimg{
+  position: absolute;
+  z-index: 2;
+  width: fit-content;
+text-align: center;
+  width: 100%;
+  top: -20px;
+  max-width: 1000px;
+  height: auto;
+
+}
+.test {
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  top: -90px;
+  left: 0;
+  transform: rotate(-30deg);
+}
+
+#contacts {
+  /* background-color: #292626; */
+  position: relative;
+  /* z-index: 1; */
+}
+#contacts .contacts {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#contacts .contacts-header {
+  z-index: 2;
+}
+#contacts .contacts-header h1 {
+  margin-bottom: 50px;
+}
+#contacts .all-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+#contacts .contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#contacts .contact-info {
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(60deg, #0f0825 0%, #2f0747 100%);
+  color: white;
+}
+
+#contacts .contact-info h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+#contacts .contact-info h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+#contacts .contact-info p {
+  color: white;
+}
+
+#contacts .contact-info span {
+  color: #f15a28;
+}
+
+#contacts .contact-img {
+  flex-basis: 50%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#contacts .contact-img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #0f0825 0%, #2f0747 100%);
+  opacity: 0.7;
+}
+#contacts .contact-img img {
+  transition: 0.3s ease transform;
+}
+
+#contacts .contact-item .contact-img:hover img {
+  transform: scale(1.1);
+}
+
+/* End Contact Section */
+/* OpenHours Section */
+#OpenHours{
+  z-index: 1;
+}
+#OpenHours .OpenHours {
+  flex-direction: column-reverse;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+#OpenHours .col-left {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+#OpenHours .col-left::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #0f0825 0%, #2f0747 100%);
+  opacity: 0.9;
+  z-index: -1;
+}
+#OpenHours .col-left p {
+  color: white;
+}
+#OpenHours .col-left span {
+  color: #f15a28;
+}
+#OpenHours .col-right {
+  width: 100%;
+}
+
+#OpenHours .col-right p {
+  margin-bottom: 20px;
+}
+/* End OpenHours Section */
+
+/* Footer section */
+#footer {
+  background-image: linear-gradient(60deg, #2f0747 0%, #16082c 100%);
+}
+
+#footer .footer {
+  min-height: 100px;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+#footer .footer p {
+  font-size: 9px;
+  color: white;
+}
+#footer .welcome h1 {
+  color: white;
+}
+
+#footer .Social-icon {
+  display: flex;
+  margin: 30px 0;
+}
+
+#footer .Social-icon img {
+  padding: 0 10px;
+}
+/* End Footer section */
+
+/* Media Query Tablet */
+@media screen and (min-width: 768px) {
+  #hero .cta {
+    font-size: 2.3em;
+  }
+
+  h1.section-title {
+    font-size: 6rem;
+  }
+
+  /* Hero */
+  #hero img {
+    width: 350px;
+  }
+  /* End Hero */
+
+  /* Menu section */
+  #menu .menu-bottom .menu-item {
+    flex-basis: 45%;
+    min-height: 200px;
+    margin: 1.5%;
+  }
+  /* End Menu section */
+
+  /* Contact section */
+  #contacts .contacts .all-contacts {
+    flex-direction: row;
+  }
+  #contacts .contacts .contact-item {
+    min-height: 470px;
+    margin: 0 10px;
+  }
+
+  #contacts .contacts .contact-item .contact-info {
+    min-height: 210px;
+  }
+  /* End Contact section */
+}
+
+@media screen and (min-width: 1024px) {
+  p{
+    font-size: 1.8rem;
+  }
+  .section-title{
+    font-size: 4.3rem;
+  }
+  #header .hamburger {
+    display: none;
+  }
+  #header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+  }
+  #header .nav-list ul li {
+    display: inline-block;
+  }
+  #header .nav-list ul li a {
+    font-size: 1.7rem;
+  }
+  #header .nav-list ul a::after {
+    display: none;
+  }
+
+  #OpenHours .col-left{
+  margin: 30px;
+  padding: 10px 30px;
+
+  }
+}
+/* End Media Query Tablet */
+
+/* Media query desktop */
+@media screen and (min-width: 1100px) {
+  #menu .menu-bottom .menu-item {
+    flex-basis: 22%;
+    margin: 1.5%;
+    height: 400px;
+  }
+
+  #contacts .contacts .contact-item .contact-info {
+    min-width: 564px;
+  }
+}
+
+/* End Media query desktop */
+/* Keyframe */
+@keyframes hamburger_pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+/* EndKeyframe */
