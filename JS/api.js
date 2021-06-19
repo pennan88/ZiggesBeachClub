@@ -14,11 +14,17 @@ async function InstaAPI() {
   return urlData;
 }
 
-for (let i = 0; i < 3; i++) {
-  let RandomNum = Math.floor(Math.random() * 8);
-  InstaAPI().then(function ApiData(urlData) {
+InstaAPI().then(function ApiData(urlData) {
+  const JsonArray = [];
+  const StringJson = JSON.stringify(urlData);
+  const ParseJson = JSON.parse(StringJson);
+  JsonArray.push(ParseJson);
+
+  for (let i = 0; i < 3; i++) {
+    let RandomNum = Math.floor(Math.random() * JsonArray[0].data.length);
+
     console.log(urlData);
-    FeedArray[i].Description.innerHTML = urlData.data[RandomNum].caption;
+    FeedArray[i].Description.innerHTML = urlData.data[RandomNum].caption ?? "";
     FeedArray[i].background.style.background = `url(${
       urlData.data[RandomNum].thumbnail_url ?? urlData.data[RandomNum].media_url
     })`;
@@ -27,5 +33,5 @@ for (let i = 0; i < 3; i++) {
     FeedArray[i].background.style.backgroundRepeat = "no-repeat";
     FeedArray[i].feedurl.href = urlData.data[RandomNum].permalink;
     console.log(RandomNum);
-  });
-}
+  }
+});
