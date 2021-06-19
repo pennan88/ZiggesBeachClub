@@ -668,11 +668,20 @@ p {
   #OpenHours .col-left {
     height: 270px;
   }
+
+  #instagram .instagram #Feed-container .card {
+    width: 350px;
+    height: 400px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   #header .header .brand {
     width: 90px;
+  }
+  #instagram .instagram #Feed-container .card {
+    width: 400px;
+    height: 450px;
   }
 }
 
